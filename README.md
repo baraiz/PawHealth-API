@@ -1,51 +1,53 @@
-# 🐾 PawHealth API - Professional Dog Health Registry
+# 🐾 PawHealth Pro - Smart Veterinary Management System (V3.0.0)
 
 [![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
 [![SQLModel](https://img.shields.io/badge/ORM-SQLModel-blue?logo=python&logoColor=white)](https://sqlmodel.tiangolo.com)
 [![SQLite](https://img.shields.io/badge/Database-SQLite-003B57?logo=sqlite&logoColor=white)](https://www.sqlite.org)
 
-**PawHealth API** is a high-performance, agent-ready backend system designed for tracking and monitoring canine health, nutrition, and medical history. Built with a focus on data integrity and real-time insights.
+**PawHealth Pro** is an enterprise-grade backend solution for comprehensive pet healthcare. Unlike standard registries, it features a **Smart Task Engine** that actively monitors nutrition and medical schedules to ensure proactive care.
 
-## 🚀 Key Features
-- **Dog Profile Management**: Digital identity including breed and chip identification.
-- **Nutrition Tracking**: Logging daily food intake with data validation.
-- **Weight SOC (Security Operations Center)**: Continuous monitoring of weight changes.
-- **Medical Registry**: Tracking vaccinations and identifying overdue treatments.
-- **Alert & Analytics Engine**: Automated insights into pet health trends.
-- **Request Middleware**: Professional logging for performance monitoring (execution time in ms).
+## 🌟 Pro Features
+- **🧠 Smart Task Engine**: Automatically generates a daily checklist (e.g., "Joey needs 50g more food today", "Rabies vaccine due this week").
+- **🏥 Clinical Medical Records**: Detailed tracking of vet visits including summaries, diagnoses, and follow-up schedules.
+- **🚨 Emergency SOS Registry**: Instant access to emergency veterinary contacts and chip identification.
+- **📊 Real-time Health Analytics**: Aggregated insights into average feeding habits and weight trends.
+- **🛡️ Data Integrity**: Strict Pydantic validation for all health metrics (Weight > 0, non-empty records).
+- **⏱️ Performance Monitoring**: Integrated middleware logging request duration in milliseconds for high-frequency environments.
 
-## 🛠 Tech Stack
-- **Framework**: FastAPI (Python 3.12+)
-- **Database/ORM**: SQLModel (SQLAlchemy + Pydantic)
-- **Persistence**: SQLite (Local file-based storage)
-- **Tooling**: `uv` for lightning-fast package management
+## 🏗 System Architecture
+The project follows a modular architecture inspired by **Security Operations Centers (SOC)**, focusing on event logging and proactive alerting.
 
-## 📂 Project Structure
 ```text
 paw-health-api/
 ├── app/
-│   ├── main.py          # Server entry point & Middleware
-│   ├── models.py        # Database schemas & Validation
-│   ├── database.py      # Connection & Session management
-├── paw_health.db        # Persistent SQLite database
-├── pyproject.toml       # Dependencies
-└── README.md            # Documentation
+│   ├── main.py          # Intelligence Engine & API Routes
+│   ├── models.py        # Relational Schemas & Validation Rules
+│   ├── database.py      # Persistence Layer (SQLite)
+├── paw_health.db        # Production Database
+├── pyproject.toml       # Environment Configuration
+└── README.md            # Technical Documentation
 ```
 
-## 🚦 Quick Start
-1. **Install dependencies**:
+## 🛠 Tech Stack
+- **Language**: Python 3.12+
+- **Framework**: FastAPI (Asynchronous logic)
+- **Database**: SQLModel (Modern SQLAlchemy + Pydantic wrapper)
+- **Log Management**: Python Logging with Custom Middleware
+
+## 🚦 Getting Started
+1. **Initialize Environment**:
    ```bash
    uv sync
    ```
-2. **Start the API server**:
+2. **Launch System**:
    ```bash
    uv run uvicorn app.main:app --reload
    ```
-3. **Explore interactive docs**:
-   Navigate to [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+3. **Interactive Documentation**:
+   Access the full API suite at `http://127.0.0.1:8000/docs`
 
-## 📊 Monitoring & Performance
-The system includes a custom Middleware that logs every incoming request with detailed timing, similar to enterprise-grade security monitoring systems (HomeSOC inspiration).
+## 📝 Design Philosophy
+Developed for the **EASS-HIT** course, this project demonstrates advanced concepts in **RESTful API design**, **Database Normalization**, and **Business Logic Automation**.
 
 ---
-*Developed as part of the EASS-HIT course.*
+*Created by Bar Aizenberg - Passionate about Dog Health & Software Engineering.*
